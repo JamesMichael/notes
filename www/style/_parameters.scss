@@ -5,6 +5,11 @@
 $toolbar-fg-color: white;
 $toolbar-bg-color: #2c3e50;
 
+$toolbar-button-fg-color:       #ccc;
+$toolbar-button-bg-color:       $toolbar-bg-color;
+$toolbar-button-hover-fg-color: $toolbar-button-bg-color;
+$toolbar-button-hover-bg-color: $toolbar-button-fg-color;
+
 // Sidebar
 
 $sidebar-fg-color:     black;

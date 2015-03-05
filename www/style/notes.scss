@@ -20,15 +20,7 @@ body {
     min-height: 50rem;
 }
 
-#toolbar {
-    font-size: 1.4rem;
-
-    width:  $toolbar-width;
-    height: 100%;
-
-    color:            $toolbar-fg-color;
-    background-color: $toolbar-bg-color;
-}
+@import 'toolbar';
 
 #sidebar {
     display: $sidebar-display;
@@ -54,11 +46,6 @@ body {
     body {
         flex-direction: column;
         bottom: auto;
-    }
-
-    #toolbar {
-        width:  100%;
-        height: $toolbar-height;
     }
 
     #sidebar {
