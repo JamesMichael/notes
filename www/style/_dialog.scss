@@ -1,0 +1,8 @@
+#dialog_settings {
+    background: $dialog-bg-color;
+    border: 0;
+}
+
+#dialog_settings::backdrop {
+    background-color: $dialog-backdrop-color;
+}
