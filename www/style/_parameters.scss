@@ -5,7 +5,7 @@
 $toolbar-fg-color: white;
 $toolbar-bg-color: #2c3e50;
 
-$toolbar-button-fg-color:       #ccc;
+$toolbar-button-fg-color:       white;
 $toolbar-button-bg-color:       $toolbar-bg-color;
 $toolbar-button-hover-fg-color: $toolbar-button-bg-color;
 $toolbar-button-hover-bg-color: $toolbar-button-fg-color;
@@ -24,8 +24,8 @@ $responsive-threshold: 50rem;
 
 // Toolbar
 
-$toolbar-width:  6rem; // when in column mode
-$toolbar-height: 6rem; // when in row mode
+$toolbar-width:  5rem; // when in column mode
+$toolbar-height: 5rem; // when in row mode
 
 // Sidebar
 
