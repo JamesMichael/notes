@@ -16,6 +16,12 @@ $sidebar-fg-color:     black;
 $sidebar-bg-color:     white;
 $sidebar-border-color: #333;
 
+// Dialog Buttons
+
+$dialog-button-fg-color:       $toolbar-fg-color;
+$dialog-button-bg-color:       $toolbar-bg-color;
+$dialog-button-hover-fg-color: $dialog-button-bg-color;
+$dialog-button-hover-bg-color: $dialog-button-fg-color;
 
 // SIZING
 

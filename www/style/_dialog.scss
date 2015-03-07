@@ -1,8 +1,61 @@
-#dialog_settings {
+dialog {
     background: $dialog-bg-color;
     border: 0;
+    padding: 0;
+    box-shadow: 0px 10px 37px 3px rgba(0,0,0,0.75);
 }
 
-#dialog_settings::backdrop {
+dialog::backdrop {
     background-color: $dialog-backdrop-color;
+}
+
+dialog .buttons {
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+dialog > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+dialog section {
+    display: none;
+    flex: 1;
+    overflow-y: auto;
+    font-size: 1.6em;
+}
+
+dialog section:first-of-type {
+    display: block;
+}
+
+dialog .buttons button {
+    float: right;
+    border: none;
+
+    color:            $dialog-button-fg-color;
+    background-color: $dialog-button-bg-color;
+    padding: 0.5em 1em;
+
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+dialog .buttons button:hover {
+    color:            $dialog-button-hover-fg-color;
+    background-color: $dialog-button-hover-bg-color;
+}
+
+#dialog_settings {
+    width:      80%;
+    max-width:  70rem;
+    height:     80%;
+    max-height: 50rem;
+}
+
+#dialog_settings section {
+    padding: 1rem;
 }
