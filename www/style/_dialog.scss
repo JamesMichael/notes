@@ -27,10 +27,6 @@ dialog section {
     font-size: 1.6em;
 }
 
-dialog section:first-of-type {
-    display: block;
-}
-
 dialog .buttons button {
     float: right;
     border: none;
@@ -58,4 +54,8 @@ dialog .buttons button:hover {
 
 #dialog_settings section {
     padding: 1rem;
+}
+
+#dialog_settings .tabpanes {
+    flex: 1;
 }

@@ -16,6 +16,20 @@ $sidebar-fg-color:     black;
 $sidebar-bg-color:     white;
 $sidebar-border-color: #333;
 
+// Tabs
+
+$tabbar-fg-color:        $toolbar-fg-color;
+$tabbar-bg-color:        $toolbar-bg-color;
+
+$tabbar-button-fg-color: $toolbar-fg-color;
+$tabbar-button-bg-color: $toolbar-bg-color;
+
+$tabbar-button-hover-fg-color: $toolbar-button-bg-color;
+$tabbar-button-hover-bg-color: $toolbar-button-fg-color;
+
+$tabbar-button-active-fg-color: $toolbar-button-bg-color;
+$tabbar-button-active-bg-color: $toolbar-button-fg-color;
+
 // Dialog Buttons
 
 $dialog-button-fg-color:       $toolbar-fg-color;

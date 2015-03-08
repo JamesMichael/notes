@@ -1,0 +1,39 @@
+.tabbar {
+    color:            $tabbar-fg-color;
+    background-color: $tabbar-bg-color;
+    display: flex;
+    flex-direction: row;
+}
+
+.tabbar button {
+    border: none;
+    color:            $tabbar-button-fg-color;
+    background-color: $tabbar-button-bg-color;
+    outline: none;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tabbar button:hover {
+    color:            $tabbar-button-hover-fg-color;
+    background-color: $tabbar-button-hover-bg-color;
+}
+
+.tabbar button.active {
+    color:            $tabbar-button-active-fg-color;
+    background-color: $tabbar-button-active-bg-color;
+}
+
+.tabbar button.close {
+    margin-left: auto;
+    content: 'X';
+}
+
+.tabpanes > * {
+    display: none;
+}
+
+.tabpanes > .active {
+    display: block;
+}
