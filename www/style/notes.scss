@@ -21,23 +21,9 @@ body {
 }
 
 @import 'toolbar';
+@import 'sidebar';
 @import 'dialog';
 @import 'tabs';
-
-#sidebar {
-    display: $sidebar-display;
-
-    color:            $sidebar-fg-color;
-    background-color: $sidebar-bg-color;
-
-    font-size: 1.4rem;
-
-    width:  $sidebar-width;
-    height: 100%;
-
-    border-right:  1px solid $sidebar-border-color;
-    border-bottom: none;
-}
 
 #content {
     flex: 1;
