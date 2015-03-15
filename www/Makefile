@@ -13,7 +13,7 @@ all: $(BUILD_PATH)/index.html $(BUILD_PATH)/scripts/notes.${VERSION}.js $(BUILD_
 $(BUILD_PATH) $(BUILD_PATH)/scripts $(BUILD_PATH)/style:
 	mkdir -p $@
 
-$(BUILD_PATH)/index.html: index.tmpl | $(BUILD_PATH)
+$(BUILD_PATH)/index.html: index.html | $(BUILD_PATH)
 	sed 's/<VERSION>/${VERSION}/g' $< > $@
 
 $(BUILD_PATH)/scripts/notes.${VERSION}.js: scripts/notes.js $(shell find scripts -type f) | node_modules/babelify $(BUILD_PATH)/scripts
