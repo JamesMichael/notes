@@ -6,8 +6,9 @@
 
     font-size: 1.4rem;
 
-    width:  $sidebar-width;
-    height: 100%;
+    width:     $sidebar-width;
+    max-width: $sidebar-max-width;
+    height:    100%;
 
     border-right:  1px solid $sidebar-border-color;
     border-bottom: none;
@@ -23,4 +24,19 @@
 
 #sidebar > section.active {
     display: block;
+}
+
+@media(max-width: $responsive-threshold) {
+    #sidebar {
+        width:      100%;
+        max-width:  100%;
+
+        height:     $sidebar-height;
+        min-height: $sidebar-min-height;
+        max-height: $sidebar-max-height;
+
+        border-right:  none;
+        border-bottom: 1px solid $sidebar-border-color;
+    }
+
 }

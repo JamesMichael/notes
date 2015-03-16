@@ -52,8 +52,12 @@ $toolbar-height: 5rem; // when in row mode
 // sidebar should be hidden initially
 $sidebar-display: none;
 
-$sidebar-width:  20rem; // when in column mode
-$sidebar-height: 20rem; // when in row mode
+$sidebar-width:     40%; // when in column mode
+$sidebar-max-width: 25rem;
+
+$sidebar-height:     40%; // when in row mode
+$sidebar-min-height: 10rem;
+$sidebar-max-height: 25rem;
 
 // Dialogs
 
