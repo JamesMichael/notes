@@ -36,14 +36,6 @@ body {
         bottom: auto;
     }
 
-    #sidebar {
-        width:  100%;
-        height: $sidebar-height;
-
-        border-right:  none;
-        border-bottom: 1px solid $sidebar-border-color;
-    }
-
     #content {
         min-height: 50rem;
     }
