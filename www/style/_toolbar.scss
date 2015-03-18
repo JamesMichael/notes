@@ -36,6 +36,11 @@
     background-color: $toolbar-button-hover-bg-color;
 }
 
+#toolbar_settings {
+    margin-top: auto;
+    margin-left: auto;
+}
+
 @media (max-width: $responsive-threshold) {
     #toolbar {
         width:  100%;
