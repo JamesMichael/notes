@@ -18,8 +18,8 @@
 </nav>
 
 <div id="sidebar">
-    <section data-pane="projects">Projects</section>
-    <section data-pane="notes">Notes</section>
+    <section data-pane="projects"></section>
+    <section data-pane="notes"></section>
 </div>
 
 <section id="content">
@@ -54,6 +54,14 @@
         </div>
     </div>
 </dialog>
+
+<template id="listview">
+    <form class="listview-search">
+        <input type="text" name="search" class="search" placeholder="Search">
+        <i class="fa fa-search fa-fw"></i>
+    </form>
+    <ul class="listview-items"></ul>
+</template>
 
 <script src="scripts/notes.<VERSION>.js"></script>
 </body>
