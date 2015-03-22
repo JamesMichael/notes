@@ -13,8 +13,14 @@ $toolbar-button-hover-bg-color: $toolbar-button-fg-color;
 // Sidebar
 
 $sidebar-fg-color:     black;
-$sidebar-bg-color:     white;
+$sidebar-bg-color:     #eee;
 $sidebar-border-color: #333;
+
+$sidebar-item-active-fg-color: #fff;
+$sidebar-item-active-bg-color: #5c97bf;
+
+$sidebar-item-hover-fg-color: $sidebar-fg-color;
+$sidebar-item-hover-bg-color: $sidebar-bg-color;
 
 // Tabs
 

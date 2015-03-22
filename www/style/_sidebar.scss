@@ -24,7 +24,9 @@
 }
 
 #sidebar > section.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 @media(max-width: $responsive-threshold) {
@@ -68,6 +70,11 @@
     font-size: 1.2em;
 }
 
+.listview-items {
+    overflow-y: auto;
+    flex: 1;
+}
+
 .listview-items:empty:after {
     content: 'No Items';
     color: #ccc;
@@ -76,4 +83,20 @@
     text-align: center;
     margin: 1rem 0;
     display: block;
+}
+
+.listview-items li {
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.listview-items li.active,
+.listview-items li.active:hover {
+    color: $sidebar-item-active-fg-color;
+    background-color: $sidebar-item-active-bg-color;
+}
+
+.listview-items li:hover {
+    color: $sidebar-item-hover-fg-color;
+    background-color: $sidebar-item-hover-bg-color;
 }
