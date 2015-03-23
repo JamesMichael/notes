@@ -15,11 +15,12 @@ class ListView {
         this.element = element;
         this.datasource = datasource;
 
+        let listviewcell_template = document.getElementById('listview_cell');
         let list_fragment = document.createDocumentFragment();
         for (let project_id of this.datasource) {
-            let li = document.createElement('li');
-            li.textContent = this.datasource.get(project_id);
-            list_fragment.appendChild(li);
+            let name = this.datasource.get(project_id);
+            let cell = listviewcell(listviewcell_template, name);
+            list_fragment.appendChild(cell);
         }
 
         // copy the template, add data, and render into element
@@ -40,6 +41,13 @@ class ListView {
         var search = this.element.querySelector('.listview-search input');
         search.focus();
     }
+}
+
+function listviewcell(template, name) {
+    template.content.querySelector('.name').innerHTML = name;
+
+    let clone = document.importNode(template.content, true);
+    return clone;
 }
 
 module.exports = ListView;
