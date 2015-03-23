@@ -88,6 +88,8 @@
 .listview-items li {
     padding: 0.5em;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
 }
 
 .listview-items li.active,
@@ -99,4 +101,41 @@
 .listview-items li:hover {
     color: $sidebar-item-hover-fg-color;
     background-color: $sidebar-item-hover-bg-color;
+}
+
+.listview-items .name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+}
+
+.listview-items .tools {
+    float: right;
+    display: none;
+}
+
+.listview-items .active .tools,
+.listview-items li:hover .tools {
+    display: inline-block;
+}
+
+.listview-items .tools i {
+    padding: 0 0.1em;
+}
+
+.listview-items .active .tools i:hover {
+    color: #333;
+}
+
+.listview-items .tools i:hover {
+    color: $sidebar-item-tool-hover-fg-color;
+}
+
+.listview-items li:first-child .fa-chevron-up {
+    visibility: hidden;
+}
+
+.listview-items li:last-child .fa-chevron-down {
+    visibility: hidden;
 }
