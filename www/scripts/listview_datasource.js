@@ -46,6 +46,10 @@ class ListViewDataSource {
     // removes the element with the given id
     remove(id) {
     }
+
+    first() {
+        return undefined;
+    }
 }
 
 module.exports = ListViewDataSource;
