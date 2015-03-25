@@ -15,24 +15,17 @@ class ListView {
         this.element = element;
         this.datasource = datasource;
 
-        let listviewcell_template = document.getElementById('listview_cell');
-        let list_fragment = document.createDocumentFragment();
-        for (let project_id of this.datasource) {
-            let name = this.datasource.get(project_id);
-            let cell = listviewcell(listviewcell_template, name);
-            list_fragment.appendChild(cell);
-        }
-
         // copy the template, add data, and render into element
         let name = datasource.name;
         let template = document.getElementById(templateid);
         template.content.querySelector('.listview-search input').placeholder = `Search ${name}`;
-        template.content.querySelector('.listview-items').appendChild(list_fragment);
 
         let clone = document.importNode(template.content, true);
         element.appendChild(clone);
 
-        template.content.querySelector('.listview-items').innerHTML = '';
+        this.list_element = element.querySelector('.listview-items');
+        this.selected_id = this.datasource.first();
+        this.render();
     }
 
     // called when the listview should be selected
@@ -41,10 +34,31 @@ class ListView {
         var search = this.element.querySelector('.listview-search input');
         search.focus();
     }
+
+    render() {
+        let cell_template = document.getElementById('listview_cell');
+        let list_fragment = document.createDocumentFragment();
+
+        for (let project_id of this.datasource) {
+            let name = this.datasource.get(project_id);
+            let is_selected = project_id == this.selected_id;
+            let cell = listviewcell(cell_template, name, is_selected);
+            list_fragment.appendChild(cell);
+        }
+
+        this.list_element.innerHTML = '';
+        this.list_element.appendChild(list_fragment);
+    }
 }
 
-function listviewcell(template, name) {
+function listviewcell(template, name, is_selected = false) {
     template.content.querySelector('.name').innerHTML = name;
+
+    if (is_selected) {
+        template.content.querySelector('li').classList.add('active');
+    } else {
+        template.content.querySelector('li').classList.remove('active');
+    }
 
     let clone = document.importNode(template.content, true);
     return clone;
