@@ -47,6 +47,8 @@ class ListView {
             let name = this.datasource.get(project_id);
             let is_selected = project_id == this.selected_id;
             let cell = listviewcell(cell_template, name, is_selected);
+            cell.querySelector('li').addEventListener('click', (e) => this.select(project_id));
+
             list_fragment.appendChild(cell);
         }
 
