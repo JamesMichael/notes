@@ -24,8 +24,7 @@ class ListView {
         element.appendChild(clone);
 
         this.list_element = element.querySelector('.listview-items');
-        this.selected_id = this.datasource.first();
-        this.render();
+        this.select(this.datasource.first());
     }
 
     // called when the listview should be selected
@@ -33,6 +32,11 @@ class ListView {
         // activate the search box
         var search = this.element.querySelector('.listview-search input');
         search.focus();
+    }
+
+    select(id) {
+        this.selected_id = id;
+        this.render();
     }
 
     render() {
