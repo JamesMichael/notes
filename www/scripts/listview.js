@@ -39,6 +39,16 @@ class ListView {
         this.render();
     }
 
+    move_up(id) {
+        this.datasource.move_up(id);
+        this.render();
+    }
+
+    move_down(id) {
+        this.datasource.move_down(id);
+        this.render();
+    }
+
     render() {
         let cell_template = document.getElementById('listview_cell');
         let list_fragment = document.createDocumentFragment();
@@ -48,6 +58,16 @@ class ListView {
             let is_selected = project_id == this.selected_id;
             let cell = listviewcell(cell_template, name, is_selected);
             cell.querySelector('li').addEventListener('click', (e) => this.select(project_id));
+
+            cell.querySelector('.fa-chevron-up').addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.move_up(project_id)
+            });
+
+            cell.querySelector('.fa-chevron-down').addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.move_down(project_id)
+            });
 
             list_fragment.appendChild(cell);
         }
